@@ -5,9 +5,8 @@ node {
 
     stage("Maven Build Stage"){
         def mvnHome = tool name: "maven", type: "maven"
-        sh "cd demo/"
         // echo "Hello"
-        sh "${mvnHome}/bin/mvn clean package"
+        sh "${mvnHome}/bin/mvn clean package ./demo/"
     }
 
     stage("Code Check using Sonarqube"){
