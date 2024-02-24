@@ -14,7 +14,7 @@ node {
     }
 
     stage("Docker Image Build Stage"){
-        sh "docker build -t Tomcat-Deploy"
+        sh "docker build -t tomcat-Deploy"
     }
 
     stage("Application Deploy on Docker"){
