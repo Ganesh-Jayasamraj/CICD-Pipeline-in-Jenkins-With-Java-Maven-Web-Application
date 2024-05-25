@@ -20,7 +20,7 @@ node {
 
     stage("Application Deploy on Docker"){
         sh "docker rm -f maven-web-app"
-        sh "docker run -d -p 80:8080 --name maven-web-app tomcat-deploy"
+        sh "docker run -d -p 8085:8080 --name maven-web-app tomcat-deploy"
     }
 
     stage("Upload Docker images on Nexus Server"){
